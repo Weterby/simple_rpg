@@ -27,9 +27,9 @@ public class Interactions : MonoBehaviour
         if(Physics.Raycast(interactionRay, out interactionInfo, Mathf.Infinity))
         {
             GameObject interactedObject = interactionInfo.collider.gameObject;
-            if(interactedObject.tag == "Interactable")
+            if(interactedObject.CompareTag("Interactable"))
             {
-                Debug.Log("Interacted with " + interactedObject.name);
+                interactedObject.GetComponent<Interactable>().MoveToInteraction(playerAgent);
             }
             else
             {
