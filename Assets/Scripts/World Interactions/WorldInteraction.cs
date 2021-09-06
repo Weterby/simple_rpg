@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class Interactions : MonoBehaviour
+public class WorldInteraction : MonoBehaviour
 {
     NavMeshAgent playerAgent;
 
@@ -33,6 +33,7 @@ public class Interactions : MonoBehaviour
             }
             else
             {
+                playerAgent.stoppingDistance = 0f;
                 playerAgent.SetDestination(interactionInfo.point);
             }
         }
