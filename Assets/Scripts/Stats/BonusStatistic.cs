@@ -9,6 +9,8 @@ public class BonusStatistic
     public BonusStatistic(int bonusValue)
     {
         this.BonusValue = bonusValue;
+        Debug.Log("Bonus created: "+BonusValue);
+
     }
   
 }
